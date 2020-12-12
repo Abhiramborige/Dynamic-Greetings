@@ -1,0 +1,48 @@
+*{
+    /* The box-sizing property allows us to 
+    include the padding and border in an element's total width and height.
+    If you set box-sizing: border-box; on an element, padding and border 
+    are included in the width and height: */
+    box-sizing: border-box;
+}
+form{
+    border:2px solid black;
+    padding: 10px;
+    margin: 0 auto; 
+    width: 50%;
+    display:flex;
+    line-height: 140%;
+    font-family: calibri;
+    /* To wrap the divs inside the flex div */
+    flex-wrap: wrap;
+}
+@media only screen and (max-width:800px){
+    form{
+        width:95%;
+        transform: scale(0.9);
+        padding-top: 30px;
+        margin:0;
+    }
+}
+.label{
+    width: 30%;
+    text-align: right;
+}
+.input{
+    width: 70%;
+    text-align: left;
+    padding-left: 10px;
+}
+.option_rocket,.option_flower{
+    border: 1px solid black;
+    width: 100%;
+    display: flex;
+    text-align: center;
+    flex-wrap: wrap;
+    padding: 10px;
+}
+.button{
+    text-align: center;
+    width:100%;
+    padding-top: 10px;
+}
