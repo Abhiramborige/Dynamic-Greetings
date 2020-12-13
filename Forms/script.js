@@ -38,15 +38,15 @@ const content_flower=
 `<div class="sub_options_flower">
     <label for="number">Height of sparkle:</label><br>
     <select name="sparkleheight" id="number">
-        <option value="Low">Low</option>
-        <option value="Medium">Medium</option>
         <option value="High">High</option>
+        <option value="Medium">Medium</option>
+        <option value="Low">Low</option>
     </select><br>
-    <label for="number">Width of sparkle:</label><br>
-    <select name="sparklewidth" id="number">
-        <option value="Low">Low</option>
-        <option value="Medium">Medium</option>
-        <option value="High">High</option>
+    <label for="number">Position of Pot:</label><br>
+    <select name="flowerposition" id="number">
+        <option value="Top">Top</option>
+        <option value="Center">Center</option>
+        <option value="Bottom">Bottom</option>
     </select>
 </div> `;
 

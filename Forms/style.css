@@ -18,8 +18,8 @@ form{
 }
 @media only screen and (max-width:800px){
     form{
-        width:95%;
-        transform: scale(0.9);
+        width:100%;
+        transform: scale(0.95);
         padding-top: 30px;
         margin:0;
     }
