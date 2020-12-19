@@ -126,11 +126,13 @@ for(var i=0;i<k2.length;i++){
 }
 
 /* Access the message */
-const message=document.getElementsByTagName('h1')[0];
+const message=document.getElementsByTagName('h2')[0];
+const greet=document.getElementsByTagName('p')[0];
 for(var i=0;i<queryDict1.length;i++){
     if(queryDict1[i]=="article"){
         var replaced=queryDict2[i][0].split('+').join(' ');
-        message.innerHTML=replaced+"<br><br><p>From: "+queryDict2[i-2][0]+"</p><p>To: "+queryDict2[i-1][0]+"</p";
+        message.innerHTML=replaced
+        greet.innerHTML="From: "+queryDict2[i-2][0]+"<br>To: "+queryDict2[i-1][0];
     }
 }
 var t=document.getElementsByTagName("p");
@@ -202,7 +204,7 @@ var e=document.querySelector(".shoot");
 var s1=document.querySelectorAll(".rocket");
 var d1=document.querySelectorAll(".circle");
 var d2=document.querySelectorAll(".fire");
-var h=document.getElementsByTagName("h1");
+var h=document.getElementsByTagName("h2");
 e.addEventListener("click",function(){
     while(true){
         if(e.value=="start"){

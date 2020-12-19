@@ -181,8 +181,8 @@ var k4=z4.textContent;
 function myFunction(x){
     // If media query matches
     if (x.matches){ 
-        z1.innerHTML="Receiver:";
-        z2.innerHTML="Sender:";
+        z1.innerHTML="Sender:";
+        z2.innerHTML="Receiver:";
         z3.innerHTML="Rockets+:";
         z4.innerHTML="FlowerPots+:";
     }
