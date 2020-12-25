@@ -46,3 +46,47 @@ form{
     width:100%;
     padding-top: 10px;
 }
+
+.footer-div{
+    font-family: calibri;
+    text-align: center;
+}
+.footer-div ul{
+    text-decoration: none;
+    text-align:center;
+}
+.footer-div ul li{
+    display: inline-block;
+    list-style: none;
+    font-size: 26px;
+    padding-left: 10px;
+    padding-right: 10px;
+    transform: translate(-50%, -50%);
+}
+.footer-div ul li > a {
+    transition: 0.3s;
+}
+.footer-div ul li > a:hover {
+    font-size: 30px;
+    
+}
+.footer-div ul li:nth-child(1) a i {
+    color: #211F1F;
+}
+.footer-div ul li:nth-child(2) a i{
+    color: #c4302b;
+}
+.footer-div ul li:nth-child(3) a i{
+    color: #0077B5;
+}
+@media only screen and (max-width: 800px) {
+    .footer-div ul li{
+        font-size: 22px;
+    }
+    .footer-div ul li > a:hover {
+        font-size: 25px;
+    }
+    h3{
+        font-size: 20px;
+    }
+}

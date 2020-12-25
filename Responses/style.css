@@ -8,6 +8,13 @@
     left:50vw;
     bottom:20vh;
 }
+.try{
+    font-size: medium;
+    text-transform: capitalize;
+    position: absolute;
+    left:50vw;
+    bottom:16vh;
+}
 body{
     background-color: black;
 }
@@ -121,6 +128,10 @@ p{
     p{
         right:10vw;
         bottom: 25vh;
+    }
+    .try{
+        bottom:0;
+        left:10vw;
     }
 }
 @keyframes transition{
