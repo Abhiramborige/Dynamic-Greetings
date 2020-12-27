@@ -14,8 +14,7 @@ A simple Javascript Project, through which, we can share our greets to our dear 
 * Huge scope on future updates.
 
 ***
-<a href="http://www.youtube.com/watch?feature=player_embedded&v=L7iKSmuuNuw" target="_blank" 
-<img src="http://img.youtube.com/vi/L7iKSmuuNuw/0.jpg" alt="Youtube Video" width="400" height="300" border="10"/></a>
+[![IMAGE ALT TEXT HERE](http://img.youtube.com/vi/L7iKSmuuNuw/0.jpg)](http://www.youtube.com/watch?v=L7iKSmuuNuw)
 ***
 
 ## Future Updates !
