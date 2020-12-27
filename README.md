@@ -2,7 +2,7 @@
 A simple Javascript Project, through which, we can share our greets to our dear ones !!.
 ***
 ## A Look !
-<img src="others/home.jpg" alt="Sender's side" width="600" height="400">
+<img src="others/home.jpg" alt="Sender's side">
 <img src="others/greet.png" alt="Receiver's side" width="700" height="400">
 
 ***
