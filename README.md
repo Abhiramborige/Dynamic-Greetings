@@ -14,7 +14,7 @@ A simple Javascript Project, through which, we can share our greets to our dear 
 ***
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=L7iKSmuuNuw" target="_blank">
 <img src="http://img.youtube.com/vi/L7iKSmuuNuw/0.jpg" 
-alt="IMAGE ALT TEXT HERE" width="240" height="180" border="10" /></a>
+alt="IMAGE ALT TEXT HERE" width="240" height="180" border="10"></a>
 ## Future Updates !
 * Add some more designs and make them customizable.
 * Implement a simple database using Firestore.
