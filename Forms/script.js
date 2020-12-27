@@ -164,7 +164,7 @@ opt2.addEventListener("click",function(){
 });
 
 var z1=document.querySelector("label[for=name1]");
-var z2=document.querySelector("label[for=name2]");
+//var z2=document.querySelector("label[for=name2]");
 var z3=document.querySelector("label[for=rocketchoice]");
 var z4=document.querySelector("label[for=flowerchoice]");
 
@@ -175,20 +175,20 @@ event handler function manually and
 pass the media query as the argument. */
 
 var k1=z1.textContent;
-var k2=z2.textContent;
+//var k2=z2.textContent;
 var k3=z3.textContent;
 var k4=z4.textContent;
 function myFunction(x){
     // If media query matches
     if (x.matches){ 
         z1.innerHTML="Sender:";
-        z2.innerHTML="Receiver:";
+        //z2.innerHTML="Receiver:";
         z3.innerHTML="Rockets+:";
         z4.innerHTML="FlowerPots+:";
     }
     else{
         z1.innerHTML=k1;
-        z2.innerHTML=k2;
+        //z2.innerHTML=k2;
         z3.innerHTML=k3;
         z4.innerHTML=k4;
     }

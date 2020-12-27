@@ -1,24 +1,33 @@
 *{
     box-sizing: border-box;
 }
-.shoot{
+button,input{
+    background-color: aquamarine;
+    border:none;
+    border-radius: 10px;
+    padding-left:10px;
+    padding-right: 10px;
     font-size: medium;
     text-transform: capitalize;
-    position: absolute;
-    left:50vw;
-    bottom:20vh;
+    font-weight: bolder;
+    margin-top: 10px;
 }
-.try{
-    font-size: medium;
-    text-transform: capitalize;
+.bclass{
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
     position: absolute;
-    left:50vw;
-    bottom:16vh;
+    width:100%;
+    bottom:20vh;
+    position:absolute;
 }
 body{
     background-color: black;
 }
-
+.flower_div{
+    border:2px solid white;
+}
 .master_rocket{
     display:flex;
     justify-content:center;
@@ -94,45 +103,41 @@ body{
     position: absolute;
     bottom:10vh;
 }
-
-h2{
+.read{
+    border:2px solid white;
     position:absolute;
-    bottom:40vh;
-    left:45vw;
+    bottom:30vh;
+    right:20vw;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding-right:10px;
+    padding-left:10px;
+    width:60%;
+}
+h1{
     background: linear-gradient(to right, rgb(35, 255, 237) 0%, 
   rgb(253, 115, 23) 60%, rgb(255, 74, 74) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     /* animation-name: transition; */
     animation-duration: 2s;
     animation-fill-mode: forwards;
     animation-iteration-count: infinite;
     opacity:0;
-    z-index: 1;
-    font-size: 5vh;
+    text-align: center;
+    width:100%;
 }
 p{
     color: white;
-    position: absolute;
-    bottom: 20vh;
-    right: 30vw;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    z-index: 1;
 }
 @media only screen and (max-width: 600px){
-    h2{
-        left:10vw;
-        bottom: 48vh;
-    }
-    p{
-        right:10vw;
-        bottom: 25vh;
-    }
-    .try{
-        bottom:0;
-        left:10vw;
-    }
+    .read{
+        width:100%;
+        left:0vw;
+    } 
 }
 @keyframes transition{
     0%{

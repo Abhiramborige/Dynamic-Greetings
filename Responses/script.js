@@ -72,12 +72,12 @@ for(var i=0;i<k1.length;i++){
         /* Rocket will be left of button */ 
         k1[i].style.transform="rotate(-90deg)";
         /* trabslate transform is same as below */
-        k1[i].style.left=(rocket_pos-((i+1)*14)/2)+"vw";
+        k1[i].style.left=(rocket_pos-((i+1)*10)/2)+"vw";
     }
     else{
         /* Rocket will be right of button */ 
         k1[i].style.transform="rotate(-90deg)";
-        k1[i].style.left=(rocket_pos+((i+1)*14)/2)+"vw";
+        k1[i].style.left=(rocket_pos+((i+1)*10)/2)+"vw";
     }
     k1[i].style.top="90vh";
 }
@@ -96,10 +96,10 @@ for(var i=0;i<k2.length;i++){
     /* First added rocket will come towards left as 
     margin was mentioned to the right of the div. */
     if(i%2!=0){
-        k2[i].style.marginLeft=(i+1)*14+"vw";
+        k2[i].style.marginLeft=(i+1)*10+"vw";
     }
     if(i%2==0){
-        k2[i].style.marginRight=(i+1)*14+"vw";
+        k2[i].style.marginRight=(i+1)*10+"vw";
     }
     /* Below is done to make sure that all divs containing
     the blast are at the top of the page. 50 is the height of each div */
@@ -126,13 +126,14 @@ for(var i=0;i<k2.length;i++){
 }
 
 /* Access the message */
-const message=document.getElementsByTagName('h2')[0];
+const message=document.getElementsByTagName('h1')[0];
 const greet=document.getElementsByTagName('p')[0];
 for(var i=0;i<queryDict1.length;i++){
     if(queryDict1[i]=="article"){
         var replaced=queryDict2[i][0].split('+').join(' ');
         message.innerHTML=replaced
-        greet.innerHTML="From: "+queryDict2[i-2][0]+"<br>To: "+queryDict2[i-1][0];
+        greet.innerHTML="From: "+queryDict2[i-1][0];
+        // "<br>To: "+queryDict2[i-1][0];
     }
 }
 var t=document.getElementsByTagName("p");
@@ -172,10 +173,10 @@ for(var i=0;i<k3.length;i++){
     /* First added rocket will come towards left as 
     margin was mentioned to the right of the div. */
     if(i%2!=0){
-        k3[i].style.marginLeft=(i+1)*10+"vw";
+        k3[i].style.marginLeft=(i+1)*14+"vw";
     }
     if(i%2==0){
-        k3[i].style.marginRight=(i+1)*10+"vw";
+        k3[i].style.marginRight=(i+1)*14+"vw";
     }
     
     if(g=="Bottom"){
@@ -204,7 +205,7 @@ var e=document.querySelector(".shoot");
 var s1=document.querySelectorAll(".rocket");
 var d1=document.querySelectorAll(".circle");
 var d2=document.querySelectorAll(".fire");
-var h=document.getElementsByTagName("h2");
+var h=document.getElementsByTagName("h1");
 e.addEventListener("click",function(){
     while(true){
         if(e.value=="start"){
