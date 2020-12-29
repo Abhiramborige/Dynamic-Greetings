@@ -132,14 +132,9 @@ for(var i=0;i<queryDict1.length;i++){
     if(queryDict1[i]=="article"){
         var replaced=queryDict2[i][0].split('+').join(' ');
         message.innerHTML=replaced
-        greet.innerHTML="From: "+queryDict2[i-1][0];
+        greet.innerHTML="From: "+queryDict2[i-1][0].split('+').join(' ');
         // "<br>To: "+queryDict2[i-1][0];
     }
-}
-var t=document.getElementsByTagName("p");
-for(var i=0;i<t.length;i++){
-    t[i].style.fontSize="20px";
-    t[i].style.textAlign="left";
 }
 
 /* Dynamic creation of keyframes to the rockets */

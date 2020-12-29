@@ -12,6 +12,7 @@ button,input{
     font-weight: bolder;
     margin-top: 10px;
     outline:none;
+    cursor: pointer;
 }
 .bclass{
     display:flex;
@@ -25,9 +26,6 @@ button,input{
 }
 body{
     background-color: black;
-}
-.flower_div{
-    border:2px solid white;
 }
 .master_rocket{
     display:flex;
@@ -133,6 +131,7 @@ h1{
 }
 p{
     color: white;
+    font-size: 20px;
 }
 @media only screen and (max-width: 600px){
     .read{
