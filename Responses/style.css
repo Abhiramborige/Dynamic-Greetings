@@ -11,6 +11,7 @@ button,input{
     text-transform: capitalize;
     font-weight: bolder;
     margin-top: 10px;
+    outline:none;
 }
 .bclass{
     display:flex;
