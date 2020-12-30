@@ -1,6 +1,8 @@
 var queryDict1=[];
 var queryDict2=[];
-location.search.substr(1).split("&").forEach(function(item) {
+/* Decode the default encodings */
+var url=decodeURIComponent(location.search);
+url.substr(1).split("&").forEach(function(item) {
     var d1=item.split("=")[0];
     var d2=item.split("=")[1];
     var flag=false;
