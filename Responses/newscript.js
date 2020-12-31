@@ -1,5 +1,4 @@
-// Initialize Firebase
-firebase.initializeApp(firebaseConfig);
+
 
 const db=firebase.firestore();
 var user=(queryDict2[queryDict1.indexOf('name1')])[0];
