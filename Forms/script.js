@@ -63,7 +63,7 @@ opt1.addEventListener("click",function(){
         var l1=document.querySelector(".label");
         var l2=document.querySelector(".input");
         var temp1=document.createElement('label');
-        temp1.setAttribute('for','number_rocket')
+        temp1.setAttribute('for','number_rocket');
         temp1.textContent="Count:";
         l1.insertBefore(temp1,l1.querySelector('label[for=flowerchoice]'));
         var br=document.createElement('br');
