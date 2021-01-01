@@ -197,7 +197,7 @@ for(var i=0;i<k3.length;i++){
 }
 
 var audio1 = document.getElementById("sound_play1");
-audio1.volume=0.05;
+audio1.volume=0.1;
 
 /* Animation control */
 var e=document.querySelector(".shoot");
@@ -206,7 +206,7 @@ var d1=document.querySelectorAll(".circle");
 var d2=document.querySelectorAll(".fire");
 var h=document.getElementsByTagName("h1");
 var audio2=document.getElementById("sound_play2");
-audio2.volume=0.03;
+audio2.volume=0.1;
 e.addEventListener("click",function(){
     while(true){
         if(e.value=="start"){
