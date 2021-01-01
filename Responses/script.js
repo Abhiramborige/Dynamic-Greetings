@@ -196,6 +196,8 @@ for(var i=0;i<k3.length;i++){
     }
 }
 
+var audio1 = document.getElementById("sound_play1");
+audio1.volume=0.05;
 
 /* Animation control */
 var e=document.querySelector(".shoot");
@@ -203,6 +205,8 @@ var s1=document.querySelectorAll(".rocket");
 var d1=document.querySelectorAll(".circle");
 var d2=document.querySelectorAll(".fire");
 var h=document.getElementsByTagName("h1");
+var audio2=document.getElementById("sound_play2");
+audio2.volume=0.03;
 e.addEventListener("click",function(){
     while(true){
         if(e.value=="start"){
@@ -232,6 +236,11 @@ e.addEventListener("click",function(){
                 d2[i].style.animationName="burst";
             }
             h[0].style.animationName="transition";
+            /* Audio */
+            audio2.currentTime = 0;
+            audio2.play();
+            audio1.play();
+
             e.value="stop";
             console.log("started");
             break;
@@ -249,6 +258,9 @@ e.addEventListener("click",function(){
             }
             h[0].style.animationName="none";
             e.value="start";
+            /* Audio */
+            audio2.pause();
+
             console.log("stopped");
             break;
         }
