@@ -121,19 +121,26 @@ h1{
   rgb(253, 115, 23) 60%, rgb(255, 74, 74) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+.sub_div_msg{
+    display: flex;
     /* animation-name: transition; */
     animation-duration: 2s;
     animation-fill-mode: forwards;
     animation-iteration-count: infinite;
-    opacity:0;
     text-align: center;
-    width:100%;
+    width: 100%;
     overflow-wrap: break-word;
+    word-break: break-all;
+    justify-content: center;
+    opacity:0;
+    flex-wrap: wrap;
 }
 p{
     color: white;
     font-size: 20px;
     overflow-wrap: break-word;
+    word-break: break-all;
 }
 @media only screen and (max-width: 600px){
     .read{

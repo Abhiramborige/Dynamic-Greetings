@@ -16,6 +16,7 @@ A simple Javascript Project, through which, we can share our greets to our dear 
 * Main purpose is to greet Diwali wishes.
 * No restrictions.
 * Huge scope on future updates.
+* Distinguish emoji and normal character
 
 ## Future Updates !
 * Add some more designs and make them customizable.
