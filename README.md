@@ -7,7 +7,7 @@ A simple Javascript Project, through which, we can share our greets to our dear 
 
 ***
 [![IMAGE ALT TEXT HERE](http://img.youtube.com/vi/L7iKSmuuNuw/0.jpg)](http://www.youtube.com/watch?v=L7iKSmuuNuw)
-Fireworks
+
 ***
 
 ## Features
