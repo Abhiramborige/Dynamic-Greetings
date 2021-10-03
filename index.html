@@ -1,101 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dynamic Greetings</title>
+<head>
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Initial Forms</title>
     <!--Font awesome-->
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
-      integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="Forms/style.css" />
-  </head>
-  <body>
-    <div class="nav">
-      <ul>
-        <li>
-          <a href="https://github.com/Abhiramborige/Dynamic-Greetings"
-            ><i class="fa fa-github fa-lg" aria-hidden="true"></i
-          ></a>
-        </li>
-        <li>
-          <a href="https://www.youtube.com/watch?v=L7iKSmuuNuw"
-            ><i class="fa fa-youtube-play fa-lg" aria-hidden="true"></i
-          ></a>
-        </li>
-        <li>
-          <a href="http://abhiramborige.me">
-            <i class="fa fa-user-circle fa-lg" aria-hidden="true"></i>
-          </a>
-        </li>
-      </ul>
-    </div>
-    <h1>Dynamic Greetings</h1>
-    <h3>Greetings generator powered by JavaScript</h3>
-    <form id="myForm" action="Responses/index.html" method="GET">
-      <div class="label">
-        <!-- l1 -->
-        <label for="name1">Name of Sender:</label><br />
-        <!-- <label for="name2">Name of Receiver:</label><br> -->
-        <label for="article">Message:</label><br />
-        <label for="rocketchoice">Add Rockets:</label><br />
-        <label for="flowerchoice">Add FlowerPots:</label><br />
-      </div>
-      <div class="input">
-        <!-- l2 -->
-        <input type="text" name="name1" id="name1" required /><br />
-        <!-- <input type="text" name="name2" id="name2" required><br> -->
-        <textarea id="article" rows="1" name="article" cols="22"></textarea
-        ><br />
-        <!-- opt1 --><input
-          type="checkbox"
-          name="rocketchoice"
-          id="rocketchoice"
-        /><br />
-        <!-- opt2 --><input
-          type="checkbox"
-          name="flowerchoice"
-          id="flowerchoice"
-        /><br />
-      </div>
-      <div class="message"></div>
-      <!-- g -->
-      <div class="option_rocket"></div>
-      <!-- e1 -->
-      <div class="message"></div>
-      <!-- g -->
-      <div class="option_flower"></div>
-      <!-- e2 -->
-      <div class="button">
-        <input type="submit" value="Submit" />
-      </div>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="Forms/style.css">
+</head>
+<body>
+    <form  id="myForm" action="Responses/index.html" method="GET">
+        <div class="label"><!-- l1 -->
+            <label for="name1">Name of Sender:</label><br>
+            <!-- <label for="name2">Name of Receiver:</label><br> -->
+            <label for="article">Message:</label><br>
+            <label for="rocketchoice">Add Rockets:</label><br>
+            <label for="flowerchoice">Add FlowerPots:</label><br>
+        </div>
+        <div class="input"><!-- l2 -->
+            <input type="text" name="name1" id="name1" required><br>
+            <!-- <input type="text" name="name2" id="name2" required><br> -->
+            <textarea id="article" rows="1" name="article" cols="22"></textarea><br>
+            <!-- opt1 --><input type="checkbox" name="rocketchoice" id="rocketchoice"><br>
+            <!-- opt2 --><input type="checkbox" name="flowerchoice" id="flowerchoice"><br>
+        </div>
+        <div class="message"></div><!-- g -->
+        <div class="option_rocket"></div><!-- e1 -->
+        <div class="message"></div><!-- g -->
+        <div class="option_flower"></div><!-- e2 -->
+        <div class="button">
+            <input type="submit" value="Submit">
+        </div>
     </form>
-    <!-- <footer class="footer-div">
-      <h3>Connect</h3>
-      <ul>
-        <li>
-          <a
-            href="https://github.com/Abhiramborige/Dynamic-Greetings"
-            target="_blank"
-          >
-            <i class="fa fa-github-square" aria-hidden="true"></i>
-          </a>
-        </li>
-        <li>
-          <a href="https://www.youtube.com/watch?v=L7iKSmuuNuw" target="_blank">
-            <i class="fa fa-youtube-play" aria-hidden="true"></i>
-          </a>
-        </li>
-        <li>
-          <a href="http://abhiramborige.me" target="_blank">
-            <i class="fa fa-user-circle" aria-hidden="true"></i>
-          </a>
-        </li>
-      </ul>
-    </footer> -->
+    <footer class="footer-div">
+        <h3>Connect</h3>
+        <ul>
+            <li>
+                <a href="https://github.com/Abhiramborige/Dynamic-Greetings" target="_blank">
+                    <i class="fa fa-github-square" aria-hidden="true"></i>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.youtube.com/watch?v=L7iKSmuuNuw" target="_blank">
+                    <i class="fa fa-youtube-play" aria-hidden="true"></i>
+                </a>
+            </li>
+            <li>
+                <a href="http://abhiramborige.me" target="_blank">
+                    <i class="fa fa-user-circle" aria-hidden="true"></i>
+                </a>
+            </li>
+        </ul>
+    </footer>
     <script src="Forms/script.js"></script>
-  </body>
+</body>
 </html>
