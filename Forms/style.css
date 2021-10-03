@@ -15,7 +15,6 @@ body {
     overflow: hidden;
     white-space: nowrap;
     display: flex;
-    flex-wrap: wrap;
     flex-direction: column;
     align-items: center;
     align-content: center;
@@ -38,6 +37,11 @@ body {
 }
 
 /* ADDED HEADER & STYLING */
+header {
+    display: flex;
+    align-items: center;
+}
+
 h1 {
     font-family: 'Barlow Semi Condensed', sans-serif;
     font-size: 70px;
@@ -46,7 +50,14 @@ h1 {
     background-size: 40%;
     background-position: 50% 50%;
     -webkit-background-clip: text;
+    background-clip: text;
     color: rgba(0, 0, 0, 0.08);
+    animation: zoomout 12s ease 900ms forwards;
+}
+
+header p {
+    font-size: 70px;
+    text-shadow: 0 0 50px rgb(114, 94, 94);
     animation: zoomout 12s ease 900ms forwards;
 }
 
@@ -98,6 +109,14 @@ form {
     padding-left: 10px;
 }
 
+.input #name1 {
+    width: 100%;
+}
+
+.input textarea {
+    width: 100%;
+}
+
 .option_rocket,
 .option_flower {
     border: 1px solid black;
@@ -117,6 +136,26 @@ form {
 .footer-div {
     font-family: calibri;
     text-align: center;
+}
+
+@media only screen and (max-width:370px) {
+    h1 {
+        font-size: 40px;
+    }
+
+    header p {
+        font-size: 40px;
+    }
+
+    .label {
+        width: 50%;
+        padding-right: 10px;
+    }
+    
+    .input {
+        width: 50%;
+        padding-left: 0;
+    }
 }
 
 /* ADDED FOOTER h3 styling */
