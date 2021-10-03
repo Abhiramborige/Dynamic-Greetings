@@ -1,39 +1,105 @@
-*{
+* {
     /* The box-sizing property allows us to 
     include the padding and border in an element's total width and height.
     If you set box-sizing: border-box; on an element, padding and border 
     are included in the width and height: */
     box-sizing: border-box;
 }
-form{
-    border:2px solid black;
+
+/* ADDED BODY BACKGROUND ANIMATION STYLES ETC */
+body {
+    background: linear-gradient(45deg, rgb(91, 209, 200), rgb(165, 165, 165), rgb(28, 28, 28));
+    background-size: 400% 400%;
+    animation: gradient 10s ease infinite;
+    height: 100vh;
+    overflow: hidden;
+    white-space: nowrap;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    padding: 25px;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* ADDED HEADER & STYLING */
+h1 {
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-size: 70px;
+    text-shadow: 0 0 50px rgb(114, 94, 94);
+    background: url(https://imgr.search.brave.com/CC-VU7MSRz0XpfZGtZZL5zgcVMKEknRY8Xh_PWdO6ZQ/fit/960/640/ce/1/aHR0cHM6Ly9jZG4u/cGl4YWJheS5jb20v/cGhvdG8vMjAxNC8x/Mi8wOS8yMS8xNi9z/bm93LTU2MjM3NF85/NjBfNzIwLmpwZw);
+    background-size: 40%;
+    background-position: 50% 50%;
+    -webkit-background-clip: text;
+    color: rgba(0, 0, 0, 0.08);
+    animation: zoomout 12s ease 900ms forwards;
+}
+
+@keyframes zoomout {
+    from {
+        background-size: 40%;
+    }
+
+    to {
+        background-size: 10%;
+    }
+}
+
+form {
+    border: 2px solid black;
     padding: 10px;
-    margin: 0 auto; 
+    margin: 0 auto;
     width: 50%;
-    display:flex;
-    line-height: 140%;
-    font-family: calibri;
+    display: flex;
+    /* CHANGED FONT FOR FORM */
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    background: rgba(255, 255, 255, 0.90);
+    margin: auto;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 15px 30px 1px grey;
+
     /* To wrap the divs inside the flex div */
     flex-wrap: wrap;
 }
-@media only screen and (max-width:800px){
-    form{
-        width:100%;
+
+@media only screen and (max-width:800px) {
+    form {
+        width: 100%;
         transform: scale(0.95);
         padding-top: 30px;
-        margin:0;
+        margin: 0;
     }
 }
-.label{
+
+.label {
     width: 30%;
     text-align: right;
 }
-.input{
+
+.input {
     width: 70%;
     text-align: left;
     padding-left: 10px;
 }
-.option_rocket,.option_flower{
+
+.option_rocket,
+.option_flower {
     border: 1px solid black;
     width: 100%;
     display: flex;
@@ -41,21 +107,35 @@ form{
     flex-wrap: wrap;
     padding: 10px;
 }
-.button{
+
+.button {
     text-align: center;
-    width:100%;
+    width: 100%;
     padding-top: 10px;
 }
 
-.footer-div{
+.footer-div {
     font-family: calibri;
     text-align: center;
 }
-.footer-div ul{
-    text-decoration: none;
-    text-align:center;
+
+/* ADDED FOOTER h3 styling */
+h3 {
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-style: italic;
+    font-weight: 700;
+    font-size: 45px;
+    color: rgb(237, 237, 237);
+    text-shadow: 2px 2px 4px #000000;
 }
-.footer-div ul li{
+
+
+.footer-div ul {
+    text-decoration: none;
+    text-align: center;
+}
+
+.footer-div ul li {
     display: inline-block;
     list-style: none;
     font-size: 26px;
@@ -63,30 +143,38 @@ form{
     padding-right: 10px;
     transform: translate(-50%, -50%);
 }
-.footer-div ul li > a {
+
+.footer-div ul li>a {
     transition: 0.3s;
 }
-.footer-div ul li > a:hover {
+
+.footer-div ul li>a:hover {
     font-size: 30px;
-    
+
 }
+
 .footer-div ul li:nth-child(1) a i {
     color: #211F1F;
 }
-.footer-div ul li:nth-child(2) a i{
+
+.footer-div ul li:nth-child(2) a i {
     color: #c4302b;
 }
-.footer-div ul li:nth-child(3) a i{
+
+.footer-div ul li:nth-child(3) a i {
     color: #0077B5;
 }
+
 @media only screen and (max-width: 800px) {
-    .footer-div ul li{
+    .footer-div ul li {
         font-size: 22px;
     }
-    .footer-div ul li > a:hover {
+
+    .footer-div ul li>a:hover {
         font-size: 25px;
     }
-    h3{
+
+    h3 {
         font-size: 20px;
     }
 }
