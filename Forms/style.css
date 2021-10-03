@@ -1,95 +1,92 @@
-body {
-  background-color: #ffffff;
-  font-family: calibri;
-  font-weight: 600;
-}
-
-.nav {
-  margin: 0;
-  padding: 0;
-  background-color: #14213d;
-  height: 50px;
-  width: 100%;
-}
-
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-}
-
-li {
-  float: right;
-}
-
-li a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-
-a i:hover {
-  color: #fca311;
-}
-
-h1 {
-  text-align: center;
-  color: #fca311;
-}
-h3 {
-  text-align: center;
-  color: #14213d;
-}
-
-* {
-  /* The box-sizing property allows us to 
+*{
+    /* The box-sizing property allows us to 
     include the padding and border in an element's total width and height.
     If you set box-sizing: border-box; on an element, padding and border 
     are included in the width and height: */
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
-form {
-  border: 2px solid black;
-  padding: 10px;
-  margin: 0 auto;
-  width: 50%;
-  display: flex;
-  line-height: 140%;
-  font-family: calibri;
-  /* To wrap the divs inside the flex div */
-  flex-wrap: wrap;
+form{
+    border:2px solid black;
+    padding: 10px;
+    margin: 0 auto; 
+    width: 50%;
+    display:flex;
+    line-height: 140%;
+    font-family: calibri;
+    /* To wrap the divs inside the flex div */
+    flex-wrap: wrap;
+}
+@media only screen and (max-width:800px){
+    form{
+        width:100%;
+        transform: scale(0.95);
+        padding-top: 30px;
+        margin:0;
+    }
+}
+.label{
+    width: 30%;
+    text-align: right;
+}
+.input{
+    width: 70%;
+    text-align: left;
+    padding-left: 10px;
+}
+.option_rocket,.option_flower{
+    border: 1px solid black;
+    width: 100%;
+    display: flex;
+    text-align: center;
+    flex-wrap: wrap;
+    padding: 10px;
+}
+.button{
+    text-align: center;
+    width:100%;
+    padding-top: 10px;
+}
+
+.footer-div{
+    font-family: calibri;
+    text-align: center;
+}
+.footer-div ul{
+    text-decoration: none;
+    text-align:center;
+}
+.footer-div ul li{
+    display: inline-block;
+    list-style: none;
+    font-size: 26px;
+    padding-left: 10px;
+    padding-right: 10px;
+    transform: translate(-50%, -50%);
+}
+.footer-div ul li > a {
+    transition: 0.3s;
+}
+.footer-div ul li > a:hover {
+    font-size: 30px;
+    
+}
+.footer-div ul li:nth-child(1) a i {
+    color: #211F1F;
+}
+.footer-div ul li:nth-child(2) a i{
+    color: #c4302b;
+}
+.footer-div ul li:nth-child(3) a i{
+    color: #0077B5;
 }
 @media only screen and (max-width: 800px) {
-  form {
-    width: 100%;
-    transform: scale(0.95);
-    padding-top: 30px;
-    margin: 0;
-  }
-}
-.label {
-  width: 30%;
-  text-align: right;
-}
-.input {
-  width: 70%;
-  text-align: left;
-  padding-left: 10px;
-}
-.option_rocket,
-.option_flower {
-  border: 1px solid black;
-  width: 100%;
-  display: flex;
-  text-align: center;
-  flex-wrap: wrap;
-  padding: 10px;
-}
-.button {
-  text-align: center;
-  width: 100%;
-  padding-top: 10px;
+    .footer-div ul li{
+        font-size: 22px;
+    }
+    .footer-div ul li > a:hover {
+        font-size: 25px;
+    }
+    h3{
+        font-size: 20px;
+    }
 }
