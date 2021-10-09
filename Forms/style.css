@@ -11,15 +11,12 @@ body {
     background: linear-gradient(45deg, rgb(91, 209, 200), rgb(165, 165, 165), rgb(28, 28, 28));
     background-size: 400% 400%;
     animation: gradient 10s ease infinite;
-    height: 100vh;
-    overflow: hidden;
-    white-space: nowrap;
+    white-space: normal;
     display: flex;
     flex-direction: column;
     align-items: center;
     align-content: center;
     justify-content: center;
-    padding: 25px;
 }
 
 @keyframes gradient {
