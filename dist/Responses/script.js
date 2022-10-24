@@ -26,10 +26,19 @@ console.log(queryDict2);
 // check if the rendered page is shared by others or created to share
 if(!(d1=="shared" && d2=="True")){
     let button_div=document.querySelector(".bclass");
-    // <button onclick="get_short_url()">Share with friends !</button>
+    /* 
+    <button onclick="get_short_url()" class="share_btn">Share with friends ! 
+        <span class="popuptext">Sharable URL Copied !</span>
+    </button>
+    */
     var button=document.createElement("button")
     button.setAttribute("onclick","get_short_url()");
+    button.setAttribute("class","share_btn");
     button.appendChild(document.createTextNode("Share with Friends !"));
+    var span_popup=document.createElement("span");
+    span_popup.setAttribute("class","popuptext");
+    span_popup.appendChild(document.createTextNode("Shareble URL Copied !"));
+    button.appendChild(span_popup);
     button_div.appendChild(button);
 }
 
@@ -156,7 +165,6 @@ for(i=0; i<queryDict1.length; i++){
 }
 var replaced=queryDict2[i][0].split('+').join(' ');
 var replaced="<h1>"+replaced+"</h1>";
-console.log("Replaced"+replaced);
 // code for not to apply styling to the emojis to maintain the original color
 if(replaced.search(regexExp)!=-1){
     const found=replaced.match(regexExp); // returns array of all matches of emoji
@@ -170,7 +178,6 @@ if(replaced.search(regexExp)!=-1){
         }
     }
 }
-console.log(replaced);
 message.innerHTML=replaced
 greet.innerHTML="From: "+queryDict2[i-1][0].split('+').join(' ');
 // "<br>To: "+queryDict2[i-1][0];

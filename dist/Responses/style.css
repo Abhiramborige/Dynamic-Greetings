@@ -257,3 +257,55 @@ p{
         opacity:0;
     }
 }
+
+
+/*  */
+.share_btn {
+    cursor: pointer;
+    user-select: none;
+}
+  /* The actual popup */
+.share_btn .popuptext {
+    visibility: hidden;
+    width: 160px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 25%;
+    left: 50%;
+    margin-left: -80px;
+}
+  
+/* Popup arrow */
+.share_btn .popuptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+  
+/* Toggle this class - hide and show the popup */
+.share_btn .show {
+    visibility: visible;
+    animation: fadeIn 2s;
+    animation-fill-mode: forwards;
+}
+
+/* Add animation (fade in the popup) */
+@keyframes fadeIn {
+    0%  {opacity: 0;}
+    20% {opacity: 1;}
+    80% {opacity: 1;}
+    100% {
+        opacity: 0; 
+        visibility: hidden;
+    }
+}
