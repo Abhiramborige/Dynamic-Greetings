@@ -1,0 +1,219 @@
+* {
+    /* The box-sizing property allows us to 
+    include the padding and border in an element's total width and height.
+    If you set box-sizing: border-box; on an element, padding and border 
+    are included in the width and height: */
+    box-sizing: border-box;
+}
+
+/* ADDED BODY BACKGROUND ANIMATION STYLES ETC */
+body {
+    background: linear-gradient(45deg, rgb(91, 209, 200), rgb(165, 165, 165), rgb(28, 28, 28));
+    background-size: 400% 400%;
+    animation: gradient 10s ease infinite;
+    white-space: normal;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* ADDED HEADER & STYLING */
+header {
+    display: flex;
+    align-items: center;
+}
+
+h1 {
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-size: 70px;
+    text-shadow: 0 0 50px rgb(114, 94, 94);
+    background: url("../others/stars.jpg");
+    background-size: 40%;
+    background-position: 50% 50%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: rgba(0, 0, 0, 0.08);
+    animation: zoomout 12s ease 900ms forwards;
+}
+
+.wavy{
+    background: url("../others/wave.gif");
+    background-size: cover;
+    background-position: 50% 50%;
+    padding: 35px;
+    background-repeat: no-repeat;
+}
+
+.connect{
+    background: url("../others/giphy.webp");
+    background-size: cover;
+    background-position: 50% 50%;
+    padding: 35px;
+    background-repeat: no-repeat;
+}
+
+header p {
+    font-size: 70px;
+    text-shadow: 0 0 50px rgb(114, 94, 94);
+    animation: zoomout 12s ease 900ms forwards;
+}
+
+@keyframes zoomout {
+    from {
+        background-size: 40%;
+    }
+
+    to {
+        background-size: 10%;
+    }
+}
+
+form {
+    border: 2px solid black;
+    padding: 10px;
+    margin: 0 auto;
+    width: 50%;
+    display: flex;
+    /* CHANGED FONT FOR FORM */
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    background: rgba(255, 255, 255, 0.90);
+    margin: auto;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 15px 30px 1px grey;
+
+    /* To wrap the divs inside the flex div */
+    flex-wrap: wrap;
+}
+
+@media only screen and (max-width:800px) {
+    form {
+        width: 100%;
+        transform: scale(0.95);
+        padding-top: 30px;
+        margin: 0;
+    }
+}
+
+.label {
+    width: 30%;
+    text-align: right;
+}
+
+.input {
+    width: 70%;
+    text-align: left;
+    padding-left: 10px;
+}
+
+.input #name1 {
+    width: 100%;
+}
+
+.input textarea {
+    width: 100%;
+}
+
+.option_rocket,
+.option_flower {
+    border: 1px solid black;
+    width: 100%;
+    display: flex;
+    text-align: center;
+    flex-wrap: wrap;
+    padding: 10px;
+}
+
+.button {
+    text-align: center;
+    width: 100%;
+    padding-top: 10px;
+}
+
+.footer-div {
+    font-family: calibri;
+    text-align: center;
+}
+
+@media only screen and (max-width:370px) {
+    h1 {
+        font-size: 40px;
+    }
+
+    header p {
+        font-size: 40px;
+    }
+
+    .label {
+        width: 50%;
+        padding-right: 10px;
+    }
+    
+    .input {
+        width: 50%;
+        padding-left: 0;
+    }
+}
+
+/* ADDED FOOTER h3 styling */
+h3 {
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-style: italic;
+    font-weight: 700;
+    font-size: 45px;
+    color: rgb(237, 237, 237);
+    text-shadow: 2px 2px 4px #000000;
+}
+
+
+.footer-div ul {
+    text-decoration: none;
+    text-align: center;
+}
+
+.footer-div ul li {
+    display: inline-block;
+    list-style: none;
+    font-size: 35px;
+    padding-left: 10px;
+    padding-right: 10px;
+    transform: translate(-50%, -50%);
+}
+
+.footer-div ul li:nth-child(1) a i {
+    color: #211F1F;
+}
+
+.footer-div ul li:nth-child(2) a i {
+    color: #c4302b;
+}
+
+.footer-div ul li:nth-child(3) a i {
+    color: #0077B5;
+}
+
+@media only screen and (max-width: 800px) {
+    .footer-div ul li {
+        font-size: 22px;
+    }
+
+    h3 {
+        font-size: 20px;
+    }
+}

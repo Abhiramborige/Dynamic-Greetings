@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responses</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@1,300&display=swap" 
+    rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Form details are shown here 
+    <div id="output"></div> -->
+    
+    <div class="rocket_div">
+        <!-- Rocket blast will be added here -->
+    </div>
+
+    <div class="sub_master">
+        <!-- Rockets will be added here -->
+    </div>
+
+    <div class="flower_div">
+        <!-- Flowerpots along with burst will be added here -->
+    </div>
+    <div class="read">
+        <div class="sub_div_msg"><!-- Message goes here --></div>
+        <p><!-- From and to goes here --></p>
+    </div>
+    <div class="bclass">
+        <div>
+            <input type="button" class="shoot" value="start"></input>
+        </div>
+        <a href="../index.html" target="_blank">
+            <button>Want to Try !</button>
+        </a>
+    </div>
+
+    <audio id="sound_play1" autoplay="true" loop preload="auto">
+        <source src="../others/years.mp3" type="audio/mp3">
+    </audio>
+    <audio id="sound_play2" loop preload="auto">
+        <source src="../others/new_years_rocket.mp3" type="audio/mp3">
+    </audio>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-app.js"></script>
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+    https://firebase.google.com/docs/web/setup#available-libraries -->
+    <!--This line has to be added-->
+    <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-firestore.js"></script>
+
+    <script src="./script.js"></script>
+    <script src="./newscript.js"></script>
+</body> 
+</html>

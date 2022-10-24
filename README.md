@@ -2,8 +2,8 @@
 A simple Javascript Project, through which, we can share our greets to our dear ones !!.
 ***
 ## A Look !
-<img src="others/home.jpg" alt="Sender's side">
-<img src="others/greet.png" alt="Receiver's side" width="700" height="400">
+<img src="dist/others/home.jpg" alt="Sender's side">
+<img src="dist/others/greet.png" alt="Receiver's side" width="700" height="400">
 
 ***
 [![IMAGE ALT TEXT HERE](http://img.youtube.com/vi/L7iKSmuuNuw/0.jpg)](http://www.youtube.com/watch?v=L7iKSmuuNuw)
@@ -18,9 +18,15 @@ A simple Javascript Project, through which, we can share our greets to our dear 
 * No restrictions.
 * Huge scope on future updates.
 * Distinguish emoji and normal character
+* Shorten URL and share your warm wishes.
 
-## Future Updates !
-* Add some more designs and make them customizable.
-* Implement a simple database using Firestore.
-* Make the link shorter and distinguish each greet with a particular Unique ID.
-* Improve User Experience
+
+## URL Shortener.
+### Code Forked from "WebDevSimplified" and Used to my project "Dynamic-Greetings" for shortening the URL for an easy convey of greetings. [Project here.](https://github.com/Abhiramborige/Dynamic-Greetings/)
+
+## API format: 
+- GET root/.netlify/functions/server/ - health.
+- GET root/.netlify/functions/server/:shortUrl - unique shortID for long URL.
+- POST root/.netlify/functions/server/shortUrl - map each long URL to shortID.
+
+### [Hosted in Netlify using this.](https://paulreaney.medium.com/deploy-express-js-on-netlify-91cfaea39591)
