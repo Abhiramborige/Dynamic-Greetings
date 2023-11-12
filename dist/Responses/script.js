@@ -469,6 +469,9 @@ e.addEventListener("click",function(){
                 s1[i].style.animationName="none";
                 s1[i].style.boxShadow="none";
             }
+            for(var j=0;j<s3.length;j++){
+                s3[j].style.animationName="none";
+            }
             for(var i=0;i<d1.length;i++) {
                 d1[i].style.animationName="none";
             }
