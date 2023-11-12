@@ -42,6 +42,9 @@ header {
 h1 {
     font-family: 'Barlow Semi Condensed', sans-serif;
     font-size: 70px;
+    margin: 0;
+    margin-top: 30px;
+    margin-bottom: 10px;
     text-shadow: 0 0 50px rgb(114, 94, 94);
     background: url("../others/stars.jpg");
     background-size: 40%;
@@ -131,7 +134,8 @@ form {
 }
 
 .option_rocket,
-.option_flower {
+.option_flower, 
+.option_chakra {
     border: 1px solid black;
     width: 100%;
     display: flex;

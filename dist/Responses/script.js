@@ -71,6 +71,22 @@ const flower_pot_blast=
     <div class="cone"></div>
 </div>`
 
+
+const chakra_blast=
+`<div class="master_chakra">
+    <div class="wheel_base">
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <img id="logo" src="../others/chakra.png" alt="Design">
+    </div>
+</div>`
+
 /* Center of screen variable*/
 var rocket_pos=48;
 
@@ -212,11 +228,21 @@ for(var i=0;i<k3.length;i++){
     /* Purpose of beautification */
     /* First added rocket will come towards left as 
     margin was mentioned to the right of the div. */
-    if(i%2!=0){
-        k3[i].style.marginLeft=(i+1)*14+"vw";
+    if(k3.length<=2){
+        if(i%2!=0){
+            k3[i].style.marginLeft=(2)*30+"vw";
+        }
+        if(i%2==0){
+            k3[i].style.marginRight=(2)*30+"vw";
+        }
     }
-    if(i%2==0){
-        k3[i].style.marginRight=(i+1)*14+"vw";
+    else{
+        if(i%2!=0){
+            k3[i].style.marginLeft=(i+1)*14+"vw";
+        }
+        if(i%2==0){
+            k3[i].style.marginRight=(i+1)*14+"vw";
+        }
     }
     
     if(g=="Bottom"){
@@ -239,17 +265,144 @@ for(var i=0;i<k3.length;i++){
     }
 }
 
+
+
+
+var chakra_div=document.querySelector(".chakra_div");
+for(var i=0;i<Number(queryDict2[queryDict1.indexOf("chakracount")]);i++){
+    chakra_div.innerHTML=chakra_div.innerHTML+chakra_blast;
+}
+
+/* Position chakra and sparkle according to User */
+var k4=document.getElementsByClassName("master_chakra");
+
+/* making t2 same as t1 to make sure that the gap produced when
+making the rocket blasts to be at top of page is covered in the similar way.*/
+var t3=t2;
+
+for(var i=0;i<k4.length;i++){
+    
+    var g=queryDict2[queryDict1.indexOf("chakraposition")][i];
+    /* Purpose of beautification */
+    /* First added rocket will come towards left as 
+    margin was mentioned to the right of the div. */
+    if(k4.length<=2){
+        if(i%2!=0){
+            k4[i].style.marginLeft=(2)*20+"vw";
+        }
+        if(i%2==0){
+            k4[i].style.marginRight=(2)*20+"vw";
+        }
+    }
+    else{
+        if(i%2!=0){
+            k4[i].style.marginLeft=(i+1)*18+"vw";
+        }
+        if(i%2==0){
+            k4[i].style.marginRight=(i+1)*18+"vw";
+        }
+    }
+    
+    if(g=="Bottom"){
+        /* Adjusting the height of the div containing the cone and sparkle */
+        k4[i].style.height="90vh";
+        /* And then again aliging the div with the mentioned "top"
+        style and get that div back to the top of the page, with the help of "t" */
+        k4[i].style.top=(-1*t3)+"vh";
+        t3=t3+90;
+    }
+    else if(g=="Center"){
+        k4[i].style.height="40vh";
+        k4[i].style.top=(-1*t3)+"vh";
+        t3=t3+40;
+    }
+    else{
+        k4[i].style.height="20vh";
+        k4[i].style.top=(-1*t3)+"vh";
+        t3=t3+20;
+    }
+}
+
+
 var audio1 = document.getElementById("sound_play1");
-audio1.volume=0.1;
+audio1.volume=0.09;
+
+// rotation animation keyframe template
+// https://stackoverflow.com/questions/4974238/javascript-equivalent-of-pythons-format-function
+rot_keyframe=(deg_int)=>
+`0% { 
+    transform: rotate(0deg);
+}
+10%{
+    border: 2px solid orangered;
+    box-shadow: 0px 0px 60px 10px yellow;
+}
+90%{
+    border: 2px solid gray;
+    box-shadow: 0px 0px 60px 10px sandybrown;
+}
+100% { 
+    transform: rotate(${deg_int}deg);
+}`
+
+function child_modifier(parent_ele, straigh_transform, diag_transform){
+    var index=0
+    for(j in parent_ele.children){
+        ele = parent_ele.children[j]
+        if(index==0)
+            ele.style.transform=`translate(0px, ${straigh_transform}px)`;
+        else if(index==1)
+            ele.style.transform=`translate(${diag_transform}px, ${diag_transform}px)`;
+        else if(index==2)
+            ele.style.transform=`translate(${straigh_transform}px, 0px)`;
+        else if(index==3)
+            ele.style.transform=`translate(-${diag_transform}px, -${diag_transform}px)`;
+        else if(index==4)
+            ele.style.transform=`translate(0px, -${straigh_transform}px)`;
+        else if(index==5)
+            ele.style.transform=`translate(-${straigh_transform}px, 0px)`;
+        else if(index==6)
+            ele.style.transform=`translate(${diag_transform}px, -${diag_transform}px)`;
+        else if(index==7)
+            ele.style.transform=`translate(-${diag_transform}px, ${diag_transform}px)`;
+        index=index+1;
+    }
+}
+
 
 /* Animation control */
 var e=document.querySelector(".shoot");
 var s1=document.querySelectorAll(".rocket");
+var s3=document.querySelectorAll(".wheel_base");
 var d1=document.querySelectorAll(".circle");
 var d2=document.querySelectorAll(".fire");
+var d3=document.querySelectorAll(".particle")
 var h=document.getElementsByClassName("sub_div_msg");
-var audio2=document.getElementById("sound_play2");
-audio2.volume=0.1;
+// var audio2=document.getElementById("sound_play2");
+
+// for chakra (size of chakra)
+for(var i=0;i<s3.length;i++){
+    var g=queryDict2[queryDict1.indexOf("circleradius")][i];
+    if(g=="Small"){
+        s3[i].style.height="30px";
+        s3[i].style.width="30px";
+        child_modifier(s3[i], 30, 22);
+    }
+    else if(g=="Medium"){
+        s3[i].style.height="40px";
+        s3[i].style.width="40px";
+        child_modifier(s3[i], 40, 30);
+    }
+    else{
+        s3[i].style.height="50px";
+        s3[i].style.width="50px";
+        child_modifier(s3[i], 50, 35);
+    }
+}
+
+
+
+// audio2.volume=0.1;
 e.addEventListener("click",function(){
     while(true){
         if(e.value=="start"){
@@ -272,17 +425,40 @@ e.addEventListener("click",function(){
                 s1[i].style.animationName="newAnimation"+i;
                 s1[i].style.boxShadow="-30px 0px 10px orange";
             }
+            // for chakra animation (duration of rotation)
+            for(var j=0;j<s3.length;j++){
+                var text="";
+                var g=queryDict2[queryDict1.indexOf("rotateduration")][j];
+                if(g=="Short"){
+                    text=rot_keyframe(360);
+                    s3[j].style.animationDuration="1s";
+                }
+                else if(g=="Medium"){
+                    text=rot_keyframe(432);
+                    s3[j].style.animationDuration="2s";
+                }
+                else{
+                    text=rot_keyframe(540);
+                    s3[j].style.animationDuration="3s";
+                }
+                dynamicAnimation("move"+j, text); 
+                s3[j].style.animationName="move"+j;
+            }
             for(var i=0;i<d1.length;i++) {
                 d1[i].style.animationName="super_burst";
             }
             for(var i=0;i<d2.length;i++) {
                 d2[i].style.animationName="burst";
             }
+            for(var i=0;i<d3.length;i++) {
+                d3[i].style.animationName="particle";
+            }
             h[0].style.animationName="transition";
             /* Audio */
-            audio2.currentTime = 0;
-            audio2.play();
+            // audio2.currentTime = 0;
+            // audio2.play();
             audio1.play();
+            // getSoundAndFadeAudio(audio1)
 
             e.value="stop";
             console.log("started");
@@ -299,10 +475,14 @@ e.addEventListener("click",function(){
             for(var i=0;i<d2.length;i++) {
                 d2[i].style.animationName="none";
             }
+            for(var i=0;i<d3.length;i++) {
+                d3[i].style.animationName="none";
+            }
             h[0].style.animationName="none";
             e.value="start";
             /* Audio */
-            audio2.pause();
+            // audio2.pause();
+            audio1.pause();
 
             console.log("stopped");
             break;

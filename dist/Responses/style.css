@@ -309,3 +309,111 @@ p{
         visibility: hidden;
     }
 }
+
+
+
+
+/* Chakra css */
+.wheel_base{
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display:flex;
+    justify-content:center;
+    position: relative;
+    align-items:center;
+    /* animation-name: move; */
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0.2s;
+    animation-iteration-count: infinite;
+    background-color: white;
+    z-index: 3;
+}
+.master_chakra{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    align-items: flex-end;
+}
+
+.wheel_base #logo{
+    width: inherit;
+    height: inherit;
+}
+
+.particle{
+    background-color: orange;
+    border: 2px solid red;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    /* animation-name: particle; */
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    animation-iteration-count: infinite;
+    opacity: 0;
+    transform:translate(0px,0px);
+}
+
+/* .particle:nth-child(1){
+    transform:translate(0px,30px);
+}
+.particle:nth-child(2){
+    transform:translate(22px,22px);
+}
+.particle:nth-child(3){
+    transform:translate(30px,0px);
+}
+.particle:nth-child(4){
+    transform:translate(-22px,-22px);
+}
+.particle:nth-child(5){
+    transform:translate(0px,-30px);
+}
+.particle:nth-child(6){
+    transform:translate(-30px,0px);
+}
+.particle:nth-child(7){
+    transform:translate(22px,-22px);
+}
+.particle:nth-child(8){
+    transform:translate(-22px,22px);
+} */
+
+
+/* @keyframes move{
+    0% { 
+        transform: rotate(0deg);
+    }
+    10%{
+        border: 2px solid orangered;
+        box-shadow: 0px 0px 20px 10px yellow;
+    }
+    90%{
+        border: 2px solid gray;
+        box-shadow: 0px 0px 20px 10px sandybrown;
+    }
+    100% { 
+        transform: rotate(360deg);
+    }
+} */
+@keyframes particle{
+    0%{
+        opacity: 0;
+        transform:translate(0px,0px);
+    }
+    29%{
+        opacity:0;
+    }
+    30%{
+        opacity:1;
+    }
+    80%{
+        opacity:1;
+    }
+    100%{
+        opacity:0;
+    }
+}
