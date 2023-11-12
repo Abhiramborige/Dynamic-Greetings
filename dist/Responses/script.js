@@ -195,7 +195,7 @@ if(replaced.search(regexExp)!=-1){
     }
 }
 message.innerHTML=replaced
-greet.innerHTML="From: "+queryDict2[i-1][0].split('+').join(' ');
+greet.innerHTML=queryDict2[i-1][0].split('+').join(' ');
 // "<br>To: "+queryDict2[i-1][0];
 
 /* Dynamic creation of keyframes to the rockets */
